@@ -1,7 +1,9 @@
-sudo: false
+sudo: required
 
 language: rust
 cache: cargo
+
+services: docker
 
 rust: nightly
 
