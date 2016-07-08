@@ -14,7 +14,7 @@ build_apps() {
            japaric/copper:$tag \
            bash -ex -c "
 for app in $(echo app/*); do
-    pushd app/\$app
+    pushd \$app
     xargo build --target $target
     arm-none-eabi-objdump -Cd -j .vector_table -j .text target/$target/debug/app
     popd
